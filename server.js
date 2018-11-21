@@ -1,7 +1,7 @@
 let express = require("express");
 let app = express();
 
-let PORT = 8080;
+let PORT = process.env.DB_PORT || 8080;
 
 app.get("/", function (req, res) {
     res.send("eat the burger page server running");
